@@ -1,0 +1,18 @@
+body {
+  background: rgb(0, 193, 255);
+}
+
+h1, h2, h3 {
+  color: rgb(38, 53, 85);
+}
+
+p {
+  color: rgb(0, 0, 0);
+}
+
+.page {
+  width: 800px;
+  height: auto;
+  background: #fff000;
+  padding: 20px;
+}
