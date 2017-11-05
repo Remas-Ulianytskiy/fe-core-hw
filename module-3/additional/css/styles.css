@@ -1,0 +1,19 @@
+h1, h2, h3, ul p {
+  color: rgb(38, 53, 85);
+}
+
+p {
+  color: rgb(0, 0, 0);
+}
+
+ul {
+  list-style-image: url("ДОБАВИТЬ");
+}
+
+.wrapper {
+  width: 480px;
+  height: auto;
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  margin: auto;
+}
