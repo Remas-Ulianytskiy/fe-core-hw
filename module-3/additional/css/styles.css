@@ -1,19 +1,53 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: "Arial";
+}
+
 h1, h2, h3, ul p {
   color: rgb(38, 53, 85);
 }
 
+h1, h2 {
+  font-size: 25px;
+  font-family: "RGO";
+}
+
+h3 {
+  font-size: 15px;
+}
+
 p {
-  color: rgb(0, 0, 0);
+  color: rgb(78, 80, 80);
 }
 
 ul {
-  list-style-image: url("ДОБАВИТЬ");
+  list-style-image: url("../img/strelka.png");
+}
+
+ul p {
+  color: rgb(38, 53, 85);
+}
+
+img {
+  height: auto;
+  width: 408px;
 }
 
 .wrapper {
   width: 480px;
   height: auto;
-  background: rgb(255, 255, 255);
-  padding: 20px;
   margin: auto;
+  padding: 36px;
+  box-sizing: border-box;
+  background: rgb(255, 255, 255);
+}
+
+@font-face {
+  font-family: "RGO";
+  font-style: normal;
+  font-weight: 400;
+  src: local(PathwayGothicOne-Regular),
+  url("../fonts/PathwayGothicOne-Regular.ttf");
 }
