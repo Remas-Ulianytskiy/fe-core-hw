@@ -1,8 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-size: 14px;
-  font-family: "Arial";
+  font-family: "Arial", sans-serif;
 }
 
 h1, h2, h3, ul p {
@@ -10,8 +9,8 @@ h1, h2, h3, ul p {
 }
 
 h1, h2 {
-  font-size: 25px;
-  font-family: "RGO";
+  font-size: 28px;
+  font-family: "RGO", sans-serif;
 }
 
 h3 {
@@ -26,22 +25,19 @@ ul {
   list-style-image: url("../img/strelka.png");
 }
 
-ul p {
-  color: rgb(38, 53, 85);
-}
-
 img {
-  height: auto;
-  width: 408px;
+  width: 100%;
 }
 
 .wrapper {
   width: 480px;
-  height: auto;
   margin: auto;
-  padding: 36px;
+  padding: 32px;
   box-sizing: border-box;
   background: rgb(255, 255, 255);
+  /*border добавлен для простоты воспрития */
+  border-left: 2px solid rgb(211, 211, 211);
+  border-right: 2px solid rgb(211, 211, 211);
 }
 
 @font-face {

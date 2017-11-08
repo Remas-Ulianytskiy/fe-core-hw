@@ -2,8 +2,16 @@ body {
   padding: 0;
   margin: 40px 0;
   font-size: 14px;
-  font-family: "Arial";
+  font-family: "Arial", sans-serif;
   background: rgb(153, 230, 255) url("../img/back.jpg") 50% 50% no-repeat;
+}
+
+.wrapper {
+  width: 480px;
+  margin: auto;
+  padding: 36px;
+  box-sizing: border-box;
+  background: rgb(255, 255, 255);
 }
 
 h1, h2, h3, ul p {
@@ -12,7 +20,7 @@ h1, h2, h3, ul p {
 
 h1, h2 {
   font-size: 25px;
-  font-family: "RGO";
+  font-family: "RGO", sans-serif;
 }
 
 h3 {
@@ -30,17 +38,20 @@ ul {
   display: inline-block;
 }
 
-hr {
-  margin: 40px 0;
+img {
+  width: 100%;
 }
 
-.wrapper {
-  width: 480px;
-  height: auto;
-  margin: auto;
-  padding: 36px;
-  box-sizing: border-box;
-  background: rgb(255, 255, 255);
+.first-part {
+  margin-bottom: 40px;
+}
+
+.second-part::after {
+  content: "";
+  width: 100%;
+  margin: 30px auto;
+  display: block;
+  border: 1px solid rgb(211, 211, 211);
 }
 
 @font-face {
