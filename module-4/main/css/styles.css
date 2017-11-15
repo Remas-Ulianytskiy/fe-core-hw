@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 15px;
-  font-family: "Arial", sans-serif;
+  font-family: Arial, sans-serif;
   background: rgb(153, 230, 255) url("../img/back.jpg") 50% 50% no-repeat;
 }
 
@@ -18,9 +18,9 @@ body {
 
 .part-one div,
 .part-two div {
+  font-size: 14px;
   vertical-align: top;
   display: inline-block;
-  font-size: 14px;
 }
 
 .part-one div:first-child,
@@ -40,8 +40,7 @@ body {
   border: 1px solid rgb(222 , 219, 219);
 }
 
-/* text decoration */
-h1, h2, h3, ul p {
+h1, h2, h3, ul p  {
   font-weight: bold;
   color: rgb(38, 53, 85);
 }
@@ -49,6 +48,7 @@ h1, h2, h3, ul p {
 h1, h2 {
   font-size: 30px;
   font-weight: bold;
+  margin-bottom: 40px;
   font-family: "Pathway Gothic One", sans-serif;
 }
 
@@ -56,31 +56,17 @@ p {
   color: rgb(78, 80, 80);
 }
 
-/* lists */
-.part-one li::before {
-  content: "";
-  /*width: 10px;*/
-  /*border: 1px solid blue;*/
-  /*border-radius: 50%;*/
-}
-
 .part-two ul {
-  columns: 2;
-  margin: 0 auto;
+  font-size: 16px;
   list-style: none;
-  /*vertical-align: top;*/
-  /*display: inline-block;*/
-}
-
-.part-two li {
+  line-height: 20px;
   vertical-align: top;
-  font-size: 18px;
-  line-height: 24px;
+  display: inline-block;
 }
 
 /* image */
 img {
+  float: left;
   width: 360px;
   margin: 10px 25px 25px 0;
-  float: left;
 }
