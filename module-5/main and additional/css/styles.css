@@ -2,47 +2,42 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Pathway Gothic One", sans-serif;
-  background: #aad9ef url("../img/background.jpg") 50% 50% no-repeat;
+  background: #aedbf0 url("../img/background.jpg") 50% 50% no-repeat;
 }
 
 .wrapper {
   width: 1024px;
+  margin: 0 auto 40px;
   padding: 0;
-  margin: 20px auto 40px;
   box-sizing: border-box;
 }
 
-/* header */
-.wrapper header {
-  padding: 0 40px 40px 0px;
+/* HEADER */
+header {
+  padding: 0 60px 0 40px;
 }
 
 .menu {
-  text-align: center;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.menu > li {
-  margin: 0 20px;
-  list-style: none;
+.menu .menu-item {
   position: relative;
-  display: inline-block;
-  line-height: 34px;
 }
 
 .menu h1 {
-  top: 10px;
   width: 140px;
   height: 140px;
   color: #263555;
   font-size: 60px;
-  background: #fff;
   font-weight: 400;
+  background: #fff;
   text-align: center;
-  margin: 0 20px 5px;
-  position: relative;
   line-height: 140px;
   border-radius: 50%;
-  border: 15px solid #fff;
   font-family: "Dorsa", sans-serif;
 }
 
@@ -53,15 +48,88 @@ body {
   text-decoration: none;
 }
 
-/* submenu and hover */
+
+
+/* MAIN */
+main {
+  padding: 60px 60px 100px;
+  position: relative;
+  background: #fff;
+}
+
+main > img {
+  width: 904px;
+}
+
+main h2 {
+  color: #263555;
+  font-size: 28px;
+  padding: 40px 0;
+  font-weight: 400;
+}
+
+main h3 {
+  color: #fff;
+  padding: 15px;
+  font-weight: 400;
+  position: absolute;
+}
+
+.first-thesis {
+  top: 260px;
+  color: #263555;
+  font-size: 22px;
+  background: #fff;
+  border-left: 1px solid #ececec;
+}
+
+.second-thesis {
+  top: 309px;
+  color: #fff;
+  font-size: 28px;
+  letter-spacing: 1px;
+  background: #38afe5;
+}
+
+/* IMAGE AREA */
+.image-area {
+  display: inline-block;
+}
+
+.image-area img,
+.image-area div {
+  width: 288px;
+  display: inline-block;
+}
+
+.image-area div:nth-child(1),
+.image-area div:nth-child(2) {
+  padding-right: 16px;
+}
+
+/* BUTTON TO TOP */
+
+/* SWITCH SLIDE */
+.switch {
+  width: 120px;
+  height: 120px;
+  background: red;
+  border-radius: 50%;
+}
+
+/* SUBMENU AND HOVER */
 .menu-item:hover > a {
   color: #263555;
+  line-height: 40px;
 }
 
 .submenu {
-  /*margin: 0;
-  padding: 0;*/
   display: none;
+  text-align: center;
+}
+
+.menu-item:hover .submenu {
+  display: block;
 }
 
 ul.submenu {
@@ -85,6 +153,10 @@ li.submenu a {
   text-decoration: none;
 }
 
+li.submenu:hover a {
+  color: #263555;
+}
+
 ul.submenu::before {
   content: "";
   top: -5px;
@@ -93,81 +165,4 @@ ul.submenu::before {
   border-style: solid;
   border-width: 0 4px 6px 4px;
   border-color: transparent transparent #fff transparent;
-}
-
-.menu-item:hover .submenu {
-  display: block;
-}
-
-/* main */
-main {
-  padding: 40px 60px 100px;
-  background: #fff;
-  position: relative;
-}
-
-main > img {
-  width: 904px;
-}
-
-main h2 {
-  color: #263555;
-  font-size: 28px;
-  padding: 40px 0;
-  font-weight: 400;
-}
-
-main h3 {
-  color: #fff;
-  font-weight: 400;
-  position: absolute;
-  padding: 15px 20px;
-}
-
-.first-thesis {
-  top: 260px;
-  color: #263555;
-  font-size: 22px;
-  background: #fff;
-  border-left: 1px solid #ececec;
-}
-
-.second-thesis {
-  top: 309px;
-  color: #fff;
-  font-size: 28px;
-  letter-spacing: 1px;
-  background: #38afe5;
-}
-
-/* footer */
-footer {
-  padding: 20px 60px;
-  background: #fff;
-}
-
-/* image area */
-.image-area {
-  display: inline-block;
-}
-
-.image-area img,
-.image-area div {
-  width: 288px;
-  display: inline-block;
-}
-
-.image-area div:nth-child(1),
-.image-area div:nth-child(2) {
-  padding-right: 16px;
-}
-
-/* button to top */
-
-/**/
-.switch {
-  width: 120px;
-  height: 120px;
-  background: red;
-  border-radius: 50%;
 }
