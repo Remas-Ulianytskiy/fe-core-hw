@@ -87,7 +87,7 @@ main h3 {
   background: #38afe5;
 }
 
-main .relative {
+main > div:first-child {
   position: relative;
 }
 
@@ -98,11 +98,25 @@ main .relative {
 }
 
 .image-area img,
-.image-area div {
+.image-area > div {
   width: 288px;
+  height: 270px;
+  position: relative;
 }
 
-/* BUTTON TO TOP */
+/* TO THE TOP */
+main > a {
+  right: 24vw;
+  bottom: 60px;
+  width: 25px;
+  height: 25px;
+  display: block;
+  line-height: 18px;
+  text-align: center;
+  border-radius: 50%;
+  background: #38afe5;
+  position: fixed;
+}
 
 /* SWITCH SLIDE */
 .switch {
@@ -134,8 +148,6 @@ main .relative {
 
 .switch a:hover {
   opacity: 0.9;
-  /*border: 1px solid #263555;*/
-  /*box-sizing: border-box;*/
 }
 
 /* SUBMENU AND HOVER */
@@ -186,4 +198,40 @@ ul.submenu::before {
   border-style: solid;
   border-width: 0 4px 6px 4px;
   border-color: transparent transparent #fff transparent;
+}
+
+/* DESCRIPTION HOVER */
+.description {
+  padding: 0 8px;
+  display: none;
+  color: #e0e4e7;
+  box-sizing: border-box;
+}
+
+.description h4 {
+  font-size: 28px;
+  font-weight: 400;
+  text-align: center;
+  margin: 10px 20px;
+}
+
+.description p {
+  font-size: 15px;
+}
+
+.description button {
+  right: 15px;
+  bottom: 20px;
+  box-shadow: 0;
+  border-radius: 4px;
+  position: absolute;
+}
+
+.image-area > div:hover .description {
+  top: 0;
+  width: 146px;
+  height: 270px;
+  display: block;
+  position: absolute;
+  background: #193149;
 }
