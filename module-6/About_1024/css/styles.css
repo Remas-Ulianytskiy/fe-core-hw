@@ -127,6 +127,10 @@ main > div:first-child {
   border-bottom: 1px solid #dedbdb;
 }
 
+main > div:last-child .aside h2 {
+  margin-bottom: 30px;
+}
+
 /* MAIN text-decoration*/
 main h2, main h3 {
   color: #263555;
@@ -199,7 +203,7 @@ main ul {
 
 .quote::before, .quote::after {
   content: "";
-  left: 95px;
+  left: 90px;
   bottom: -50px;
   position: absolute;
   border: 20px solid transparent;
@@ -215,20 +219,49 @@ main ul {
 footer > div {
   display: flex;
   height: 100px;
-  padding: 20px 80px;
-  align-items: center;
+  box-sizing: border-box;
+}
+
+footer .contacts {
+  color: #fff;
+}
+
+footer > div:first-child {
+  padding: 20px 40px;
+  background: #30455b;
+  align-items: baseline;
   justify-content: space-around;
 }
 
-footer > div > div {
+footer > div:last-child {
+  padding: 20px;
 }
 
-footer div:first-child {
-  background: #30455b;
+footer > div:last-child a {
+  width: 40px;
+  height: 40px;
+  margin: 10px 5px;
+  border-radius: 50%;
+}
+
+footer .twitter {
+  background: #fff url("../img/sprits-social.png") -40px -40px no-repeat;
+}
+
+footer .facebook {
+  background: #fff url("../img/sprits-social.png") -0px -0px no-repeat;
+}
+
+footer .google-plus {
+  background: #fff url("../img/sprits-social.png") -40px -0px no-repeat;
+}
+
+footer .instagram {
+  background: #fff url("../img/sprits-social.png") -0px -40px no-repeat;
 }
 
 footer div:first-child a,
 footer div:first-child p {
   color: #e3e6e9;
-  font-family: "Open Sans Condensed";
+  font-family: "Open Sans Condensed", sans-serif;
 }
