@@ -182,6 +182,17 @@ main .aside li:nth-child(3)::before {
   content: "3";
 }
 
+/* MAIN button to top */
+main > a {
+  right: 23vw;
+  bottom: 26vh;
+  width: 25px;
+  height: 25px;
+  position: fixed;
+  border-radius: 50%;
+  background: #38afe5 url("../img/arrow-up.png") 50% 50% no-repeat;
+}
+
 /* MAIN list-img */
 main ul {
   font-size: 15px;
@@ -218,8 +229,15 @@ main ul {
 /* FOOTER */
 footer > div {
   display: flex;
+  flex-wrap: wrap;
   height: 100px;
   box-sizing: border-box;
+}
+
+footer div > p {
+  width: 100%;
+  text-align: center;
+  color: #fff;
 }
 
 footer .contacts {
@@ -267,7 +285,8 @@ footer div:first-child p {
   color: #e3e6e9;
   font-family: "Open Sans Condensed", sans-serif;
 }
-/*
-footer > div:last-child p {
-  flex-wrap: wrap;
-}*/
+
+/* FOOTER hover */
+footer a[target="_blank"]:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}

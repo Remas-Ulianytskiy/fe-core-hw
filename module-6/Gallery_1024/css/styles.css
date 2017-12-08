@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Pathway Gothic One", sans-serif;
+  background: #aedbf0 url("../img/background.jpg") 50% 50% no-repeat;
+}
+
+.wrapper {
+  width: 1024px;
+  margin: 0 auto 40px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper a {
+  text-decoration: none;
+}
+
+/* HEADER */
+header {
+  padding: 0 60px 0 40px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.menu .menu-item {
+  position: relative;
+}
+
+.menu h1 {
+  width: 144px;
+  height: 144px;
+  color: #263555;
+  font-size: 62px;
+  font-weight: 400;
+  background: #fff;
+  text-align: center;
+  line-height: 144px;
+  border-radius: 50%;
+  font-family: "Dorsa", sans-serif;
+}
+
+.menu .menu-item > a {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+/* HEADER hover */
+.menu-item:hover > a {
+  color: #263555;
+  line-height: 40px;
+}
+
+.submenu {
+  display: none;
+  text-align: center;
+}
+
+.menu-item:hover .submenu {
+  display: block;
+}
+
+ul.submenu {
+  top: 40px;
+  left: -10px;
+  padding: 0 5px;
+  background: #fff;
+  position: absolute;
+  border-radius: 3px;
+  border: 1px solid #fff;
+}
+
+li.submenu  {
+  padding: 4px;
+  line-height: 20px;
+}
+
+li.submenu a {
+  color: #6b7488;
+  font-size: 23px;
+}
+
+li.submenu:hover a {
+  color: #263555;
+}
+
+ul.submenu::before {
+  content: "";
+  top: -5px;
+  left: 32px;
+  position: absolute;
+  border-style: solid;
+  border-width: 0 4px 6px 4px;
+  border-color: transparent transparent #fff transparent;
+}
+
+/* MAIN */
+main {
+  padding: 60px 40px;
+  background: #fff;
+}
+
+main h2 {
+  color: #263555;
+  font-size: 30px;
+  font-weight: 400;
+  font-family: "Pathway Gothic One", sans-serif;
+}
+
+div.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+div.gallery div {
+  width: 288px;
+  height: 154px;
+  background: #000;
+  margin-bottom: 30px;
+}
+
+
+div.gallery img {
+  width: 288px;
+  height: 154px;
+}
+
+/* MAIN gallery hover */
+div.gallery img:hover  {
+  opacity: 0.6;
+  /*z-index: 100;*/
+  position: relative;
+  background-image: url("../img/icon.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
