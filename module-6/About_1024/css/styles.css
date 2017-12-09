@@ -184,7 +184,7 @@ main .aside li:nth-child(3)::before {
 
 /* MAIN button to top */
 main > a {
-  right: 23vw;
+  right: 18.5vw;
   bottom: 26vh;
   width: 25px;
   height: 25px;

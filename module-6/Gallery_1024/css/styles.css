@@ -126,18 +126,92 @@ div.gallery div {
   margin-bottom: 30px;
 }
 
-
 div.gallery img {
   width: 288px;
   height: 154px;
 }
 
 /* MAIN gallery hover */
-div.gallery img:hover  {
+div.gallery img:hover {
   opacity: 0.6;
-  /*z-index: 100;*/
   position: relative;
   background-image: url("../img/icon.png");
   background-position: 50% 50%;
   background-repeat: no-repeat;
+}
+
+/* MAIN to top */
+main a {
+  right: 18.5vw;
+  bottom: 32vh;
+  width: 25px;
+  height: 25px;
+  position: fixed;
+  border-radius: 50%;
+  background: #38afe5 url("../img/arrow-up.png") 50% 50% no-repeat;
+}
+
+/* FOOTER */
+footer > div {
+  height: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+footer div > p {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+}
+
+footer .contacts {
+  color: #fff;
+}
+
+footer > div:first-child {
+  padding: 30px 40px;
+  background: #30455b;
+  align-items: baseline;
+  justify-content: space-around;
+}
+
+footer > div:last-child {
+  padding: 20px;
+  flex-direction: row;
+  justify-content: center;
+}
+
+footer > div:last-child a {
+  width: 40px;
+  height: 40px;
+  margin: 10px 5px;
+  border-radius: 50%;
+}
+
+footer .twitter {
+  background: #fff url("../img/sprits-social.png") -40px -40px no-repeat;
+}
+
+footer .facebook {
+  background: #fff url("../img/sprits-social.png") -0px -0px no-repeat;
+}
+
+footer .google-plus {
+  background: #fff url("../img/sprits-social.png") -40px -0px no-repeat;
+}
+
+footer .instagram {
+  background: #fff url("../img/sprits-social.png") -0px -40px no-repeat;
+}
+
+footer div:first-child a,
+footer div:first-child p {
+  color: #e3e6e9;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+/* FOOTER hover */
+footer a[target="_blank"]:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
