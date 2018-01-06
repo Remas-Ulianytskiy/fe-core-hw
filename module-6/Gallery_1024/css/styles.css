@@ -102,7 +102,7 @@ ul.submenu::before {
 
 /* MAIN */
 main {
-  padding: 60px 40px;
+  padding: 60px 50px;
   background: #fff;
 }
 
@@ -116,7 +116,7 @@ main h2 {
 div.gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 div.gallery div {
@@ -126,14 +126,15 @@ div.gallery div {
   margin-bottom: 30px;
 }
 
-div.gallery img {
-  width: 288px;
-  height: 154px;
+/* MAIN gallery hover */
+div.gallery div:hover {
+  background-image: url("../img/zoom-in.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
-/* MAIN gallery hover */
-div.gallery img:hover {
-  opacity: 0.6;
+div.gallery div:hover img {
+  opacity: 0.5;
 }
 
 /* MAIN to top */
@@ -148,41 +149,59 @@ main a {
 }
 
 /* FOOTER */
-footer > div {
-  height: 120px;
-  display: flex;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-}
-
-footer div > p {
-  width: 100%;
-  color: #fff;
-  text-align: center;
-}
-
-footer .contacts {
-  color: #fff;
-}
-
 footer > div:first-child {
-  padding: 30px 40px;
-  background: #30455b;
+  display: flex;
+  padding: 15px 40px 12px;
   align-items: baseline;
   justify-content: space-around;
+  background: #30455b;
 }
 
-footer > div:last-child {
-  padding: 20px;
-  flex-direction: row;
+footer div.nav {
+  display: flex;
+  flex-direction: column;
+}
+
+footer div.nav a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 4px 0;
+}
+
+footer div.nav p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0 0 4px;
+}
+
+footer div.contacts a {
+  font-size: 15px;
+}
+
+footer div.contacts a:last-child {
+  margin: 0;
+}
+
+footer div.social {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 40px 12px;
   justify-content: center;
 }
 
-footer > div:last-child a {
+footer div.social a {
   width: 40px;
   height: 40px;
   margin: 10px 5px;
   border-radius: 50%;
+}
+
+footer div.social p {
+  width: 100%;
+  color: #fff;
+  text-align: center;
 }
 
 footer .twitter {
@@ -201,13 +220,7 @@ footer .instagram {
   background: #fff url("../img/sprits-social.png") -0px -40px no-repeat;
 }
 
-footer div:first-child a,
-footer div:first-child p {
-  color: #e3e6e9;
-  font-family: "Open Sans Condensed", sans-serif;
-}
-
 /* FOOTER hover */
 footer a[target="_blank"]:hover {
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 12px rgba(0,0,0,0.8);
 }
