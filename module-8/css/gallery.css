@@ -4,7 +4,140 @@ body {
 }
 
 .wrapper {
-  width: 1024px;
-  margin: 0 auto 40px;
+  margin: 0 auto;
+  max-width: 480px;
   box-sizing: border-box;
+  /*  */
+  /* width: 50%; */
+  /* box-sizing: border-box; */
+  /* margin: 0 auto 40px; */
+  /* background: #000; */
+  border: 1px solid red;
 }
+
+/* HEADER */
+header {
+  padding: 20px 20% 30px;
+}
+
+header .menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+header .menu-item {
+  width: 33%;
+  margin-bottom: 30px;
+  text-align: center;
+  box-sizing: border-box;
+  /*  */
+  /* border: 1px solid red; */
+}
+
+header .logo {
+  order: -1;
+  width: 100%;
+}
+
+header h1 {
+  width: 96px;
+  height: 96px;
+  color: #263555;
+  margin: 0 auto 20px;
+  font-size: 48px;
+  font-weight: 400;
+  background: #fff;
+  line-height: 96px;
+  text-align: center;
+  border-radius: 50%;
+  font-family: "Dorsa", sans-serif;
+}
+
+.menu-item a {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/* HEADER hover and submenu */
+.submenu {
+  display: none;
+}
+
+a:hover .submenu {
+  display: block;
+}
+
+.menu-item a:hover {
+  color: #263555;
+}
+
+/* MAIN */
+main {
+  background: #fff;
+}
+
+/* R */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */
