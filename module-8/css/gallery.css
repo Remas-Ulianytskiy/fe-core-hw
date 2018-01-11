@@ -5,14 +5,10 @@ body {
 
 .wrapper {
   margin: 0 auto;
-  max-width: 480px;
+  max-width: 767px;
+  /* width: 480px; */
+  min-width: 480px;
   box-sizing: border-box;
-  /*  */
-  /* width: 50%; */
-  /* box-sizing: border-box; */
-  /* margin: 0 auto 40px; */
-  /* background: #000; */
-  border: 1px solid red;
 }
 
 /* HEADER */
@@ -31,8 +27,6 @@ header .menu-item {
   margin-bottom: 30px;
   text-align: center;
   box-sizing: border-box;
-  /*  */
-  /* border: 1px solid red; */
 }
 
 header .logo {
@@ -76,35 +70,151 @@ a:hover .submenu {
 /* MAIN */
 main {
   background: #fff;
+  padding: 40px 8%;
+  box-sizing: border-box;
 }
 
-/* R */
+main h2 {
+  margin-bottom: 30px;
+  font-size: 1.6em;
+  color: #263555;
+}
 
+main .gallery {
+  width: 84%;
+  /* margin: 0 auto; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
+main .gallery-item {
+  /* width: 406px; */
+  /* height: 217px; */
+  margin-bottom: 30px;
+  background: #000;
+  /*  */
+  /* max-width: 600px;
+  min-height: auto;
+  width: 100%;
+  height: auto; */
+}
 
+main .gallery-item:hover {
+  background-image: url("../img/zoom-in.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
 
+main .gallery img {
+  /* width: 406px;
+  height: 217px; */
+  /*  */
+  /* max-width: 600px; */
+  min-height: auto;
+  width: 100%;
+  height: auto;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+main .gallery img:hover {
+  opacity: 0.5;
+}
 
 /* FOOTER */
+footer div.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 20% 10px;
+  background: #30455b;
+}
 
+footer div.nav {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Open Sans Condensed", sans-serif;
+}
 
+footer div.nav a {
+  color: #fff;
+  font-size: 14px;
+  padding-bottom: 10px;
+}
 
+footer div.contacts {
+  order: 2;
+  width: 100%;
+  margin: 10px 0;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+}
 
+footer div.contacts span {
+  color: #fff;
+  font-size: 15px;
+}
 
+footer div.contacts a {
+  margin: 0;
+  padding: 0;
+}
+
+footer div.contacts a::before {
+  content: url("../img/smartphone-call.svg");
+  position: relative;
+  right: 2px;
+  top: 2px;
+}
+
+footer div.contacts a:last-child::before {
+  content: url("../img/email.svg");
+}
+
+footer div.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 14%;
+}
+
+footer div.social a {
+  width: 30px;
+  height: 30px;
+  margin: 0 5px 15px;
+  border-radius: 50%
+}
+
+footer div.social p {
+  color: #fff;
+  font-size: 14px;
+}
+
+footer .twitter {
+  background: #fff url("../img/sprits-social.png") -45px -45px no-repeat;
+}
+
+footer .facebook {
+  background: #fff url("../img/sprits-social.png") -5px -5px no-repeat;
+}
+
+footer .google-plus {
+  background: #fff url("../img/sprits-social.png") -45px -5px no-repeat;
+}
+
+footer .instagram {
+  background: #fff url("../img/sprits-social.png") -5px -45px no-repeat;
+}
+
+/* FOOTER hover */
+footer a[target="_blank"]:hover {
+  box-shadow: 0 0 12px rgba(0,0,0,0.8);
+}
+
+@media (min-width: 768px) {
+}
 
 
 
