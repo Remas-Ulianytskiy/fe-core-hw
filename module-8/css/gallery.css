@@ -5,7 +5,7 @@ body {
 
 .wrapper {
   margin: 0 auto;
-  max-width: 767px;
+  max-width: 1024px;
   /* width: 480px; */
   min-width: 480px;
   box-sizing: border-box;
@@ -81,16 +81,18 @@ main h2 {
 }
 
 main .gallery {
-  width: 84%;
+  /* width: 84%; */
   /* margin: 0 auto; */
   display: flex;
   flex-wrap: wrap;
+  /*  */
   justify-content: space-between;
+  border: 1px solid red;
 }
 
 main .gallery-item {
-  /* width: 406px; */
-  /* height: 217px; */
+  width: 406px;
+  height: 217px;
   margin-bottom: 30px;
   background: #000;
   /*  */
@@ -107,13 +109,13 @@ main .gallery-item:hover {
 }
 
 main .gallery img {
-  /* width: 406px;
-  height: 217px; */
+  width: 406px;
+  height: 217px;
   /*  */
   /* max-width: 600px; */
-  min-height: auto;
-  width: 100%;
-  height: auto;
+  /* min-height: auto; */
+  /* width: 100%; */
+  /* height: auto; */
 }
 
 main .gallery img:hover {
@@ -213,10 +215,17 @@ footer a[target="_blank"]:hover {
   box-shadow: 0 0 12px rgba(0,0,0,0.8);
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  div.gallery-item,
+  div.gallery-item img {
+    width: 331px;
+    height: 177px;
+  }
 }
 
+@media screen and (min-width: 1024px) {
 
+}
 
 
 
