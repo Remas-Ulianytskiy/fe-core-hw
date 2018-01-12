@@ -82,11 +82,11 @@ main h2 {
 
 main .gallery {
   /* width: 84%; */
-  /* margin: 0 auto; */
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   /*  */
-  justify-content: space-between;
+  /* justify-content: space-between; */
   border: 1px solid red;
 }
 
@@ -215,16 +215,36 @@ footer a[target="_blank"]:hover {
   box-shadow: 0 0 12px rgba(0,0,0,0.8);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   div.gallery-item,
   div.gallery-item img {
     width: 331px;
     height: 177px;
   }
+
+  div.gallery {
+    justify-content: space-between;
+  }
 }
 
 @media screen and (min-width: 1024px) {
+  .wrapper {
+    margin: 0 auto 40px;
+  }
 
+  main {
+    padding: 80px 60px 60px;
+  }
+
+  div.gallery-item,
+  div.gallery-item img {
+    width: 288px;
+    height: 154px;
+  }
+  
+  div.gallery {
+    justify-content: space-between;
+  }
 }
 
 
