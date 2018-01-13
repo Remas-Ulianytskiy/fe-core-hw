@@ -1,19 +1,19 @@
 body {
   font-family: "Pathway Gothic One", sans-serif;
-  background: url("../img/background.jpg") 50% 50% no-repeat;
+  background: url("../img/background.jpg") no-repeat;
 }
 
 .wrapper {
   margin: 0 auto;
   max-width: 1024px;
-  /* width: 480px; */
   min-width: 480px;
   box-sizing: border-box;
 }
 
 /* HEADER */
 header {
-  padding: 20px 20% 30px;
+  padding: 20px 20% 0px;
+  box-sizing: border-box;
 }
 
 header .menu {
@@ -24,6 +24,7 @@ header .menu {
 
 header .menu-item {
   width: 33%;
+  max-width: 400px;
   margin-bottom: 30px;
   text-align: center;
   box-sizing: border-box;
@@ -59,11 +60,50 @@ header h1 {
   display: none;
 }
 
-a:hover .submenu {
+.menu-item:hover .submenu {
   display: block;
 }
 
 .menu-item a:hover {
+  color: #263555;
+}
+
+header .menu-item > div {
+  position: relative;
+  /* display: inline-block; */
+}
+
+ul.submenu {
+  top: 35px;
+  left: -10px;
+  padding: 0 5px;
+  background: #fff;
+  position: absolute;
+  border-radius: 3px;
+  border: 1px solid #fff;
+}
+
+ul.submenu::before {
+  content: "";
+  top: -5px;
+  left: 32px;
+  position: absolute;
+  border-style: solid;
+  border-width: 0 4px 6px 4px;
+  border-color: transparent transparent #fff transparent;
+}
+
+li.submenu  {
+  padding: 4px;
+  line-height: 18px;
+}
+
+ul.submenu li.submenu a {
+  color: #6b7488;
+  font-size: 23px;
+}
+
+ul.submenu li.submenu:hover a {
   color: #263555;
 }
 
@@ -78,16 +118,18 @@ main h2 {
   margin-bottom: 30px;
   font-size: 1.6em;
   color: #263555;
+  /*  */
+  text-align: center;
+}
+
+main .content {
+  position: relative;
 }
 
 main .gallery {
-  /* width: 84%; */
-  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  /*  */
-  /* justify-content: space-between; */
-  border: 1px solid red;
+  justify-content: space-around;
 }
 
 main .gallery-item {
@@ -95,11 +137,6 @@ main .gallery-item {
   height: 217px;
   margin-bottom: 30px;
   background: #000;
-  /*  */
-  /* max-width: 600px;
-  min-height: auto;
-  width: 100%;
-  height: auto; */
 }
 
 main .gallery-item:hover {
@@ -111,15 +148,21 @@ main .gallery-item:hover {
 main .gallery img {
   width: 406px;
   height: 217px;
-  /*  */
-  /* max-width: 600px; */
-  /* min-height: auto; */
-  /* width: 100%; */
-  /* height: auto; */
 }
 
 main .gallery img:hover {
   opacity: 0.5;
+}
+
+/* to top */
+div.content > a {
+  right: -32px;
+  bottom: -30px;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  border-radius: 50%;
+  background: #38afe5 url("../img/arrow-up.png") 50% 50% no-repeat;
 }
 
 /* FOOTER */
@@ -127,12 +170,13 @@ footer div.list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 20px 20% 10px;
+  padding: 20px 18% 10px;
   background: #30455b;
 }
 
 footer div.nav {
   width: 33%;
+  max-width: 120px;
   display: flex;
   flex-direction: column;
   font-family: "Open Sans Condensed", sans-serif;
@@ -147,6 +191,7 @@ footer div.nav a {
 footer div.contacts {
   order: 2;
   width: 100%;
+  max-width: 480px;
   margin: 10px 0;
   flex-wrap: nowrap;
   flex-direction: row;
@@ -190,8 +235,10 @@ footer div.social a {
 }
 
 footer div.social p {
+  width: 100%;
   color: #fff;
   font-size: 14px;
+  text-align: center;
 }
 
 footer .twitter {
@@ -215,25 +262,170 @@ footer a[target="_blank"]:hover {
   box-shadow: 0 0 12px rgba(0,0,0,0.8);
 }
 
+@media screen and (max-width: 767px) {
+  div.gallery-item:nth-last-of-type(-n+3) {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  .wrapper {
+    width: 92vw;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header h1 {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 20px;
+    font-size: 54px;
+    line-height: 110px;
+  }
+
+  header .menu-item a {
+    font-size: 26px;
+  }
+
+  main {
+    padding: 40px 20px 60px;
+  }
+
+  main h2 {
+    font-size: 26px;
+    text-align: left;
+  }
+
+  main .gallery {
+    justify-content: space-between;
+  }
+
+  div.gallery-item:nth-last-of-type(-2n+3) {
+    display: inherit;
+  }
+
+  div.gallery-item:nth-child(9) {
+    display: none;
+  }
+
   div.gallery-item,
   div.gallery-item img {
     width: 331px;
     height: 177px;
   }
 
-  div.gallery {
-    justify-content: space-between;
+  footer div.contacts a::before {
+    content: "tel\205a";
+    position: static;
+  }
+
+  footer div.contacts a:last-child::before {
+    content: "";
+  }
+
+  footer div.list {
+    padding: 20px 40px;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  footer div.nav {
+    width: auto;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  footer div.nav a {
+    padding: 0;
+    margin: 4px 0;
+    font-size: 16px;
+  }
+
+  footer div.nav span {
+    font-size: 17px;
+  }
+
+  footer div.contacts {
+    margin: 0;
+  }
+
+  footer div.social a {
+    width: 40px;
+    height: 40px;
+    margin: 10px 5px 25px;
+  }
+
+  footer .twitter {
+    background: #fff url("../img/sprits-social.png") -40px -40px no-repeat;
+  }
+
+  footer .facebook {
+    background: #fff url("../img/sprits-social.png") -0px -0px no-repeat;
+  }
+
+  footer .google-plus {
+    background: #fff url("../img/sprits-social.png") -40px -0px no-repeat;
+  }
+
+  footer .instagram {
+    background: #fff url("../img/sprits-social.png") -0px -40px no-repeat;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .wrapper {
-    margin: 0 auto 40px;
+    width: 1024px;
+    box-sizing: border-box;
+  }
+
+  header {
+    padding: 40px 60px 50px 40px;
+  }
+
+  header h1 {
+    width: 144px;
+    height: 144px;
+    margin: 0;
+    color: #263555;
+    font-size: 62px;
+    font-weight: 400;
+    background: #fff;
+    text-align: center;
+    line-height: 144px;
+    border-radius: 50%;
+    font-family: "Dorsa", sans-serif;
+  }
+
+  header .menu {
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  header .logo {
+    width: auto;
+    order: 0;
+  }
+
+  header .menu-item {
+    width: auto;
+    margin: 0;
+  }
+
+  header .menu-item a {
+    font-size: 28px;
   }
 
   main {
     padding: 80px 60px 60px;
+  }
+
+  main h2 {
+    font-size: 28px;
+    font-weight: 400;
+  }
+
+  main .gallery {
+    justify-content: space-between;
   }
 
   div.gallery-item,
@@ -241,42 +433,8 @@ footer a[target="_blank"]:hover {
     width: 288px;
     height: 154px;
   }
-  
-  div.gallery {
-    justify-content: space-between;
+
+  div.gallery-item:nth-child(9) {
+    display: inherit;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*  */
