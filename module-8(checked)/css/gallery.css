@@ -145,6 +145,7 @@ h2 {
 }
 
 .gallery-item:hover {
+  cursor: pointer;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-image: url("../img/zoom-in.svg");
