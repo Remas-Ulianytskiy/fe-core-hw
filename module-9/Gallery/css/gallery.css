@@ -1,0 +1,81 @@
+a {
+  text-decoration: none;
+
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: "Pathway Gothic One", sans-serif;
+  background: url("../img/background.jpg") no-repeat;
+}
+
+.container {
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 1024px;
+  box-sizing: border-box;
+  /*  */
+  border: 1px solid blue;
+}
+
+/* HEADER */
+header {
+  padding: 20px 0;
+  margin-bottom: 10px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  /*  */
+  /* justify-content: center; */
+  border: 1px solid red;
+}
+
+.menu-item {
+  width: 33%;
+  text-align: center;
+  /*  */
+  border: 1px solid red;
+}
+
+.menu-item a {
+  color: #fff;
+  font-size: 22px;
+}
+
+.menu-item a:hover {
+  color: #263555;
+}
+
+.logo {
+  order: -1;
+  width: 100%
+}
+
+h1 {
+  width: 90px;
+  height: 90px;
+  color: #263555;
+  margin: 0 auto 20px;
+  font-size: 46px;
+  font-weight: 400;
+  background: #fff;
+  line-height: 90px;
+  text-align: center;
+  border-radius: 50%;
+  font-family: "Dorsa", sans-serif;
+}
+
+.submenu {
+  display: none;
+}
+/* MAIN */
+
+
+/* FOOTER */
