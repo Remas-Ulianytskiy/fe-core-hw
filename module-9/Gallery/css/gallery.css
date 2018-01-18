@@ -1,8 +1,3 @@
-a {
-  text-decoration: none;
-
-}
-
 ul, li {
   margin: 0;
   padding: 0;
@@ -40,6 +35,7 @@ header {
 .menu-item {
   width: 33%;
   text-align: center;
+  position: relative;
   /*  */
   border: 1px solid red;
 }
@@ -47,6 +43,7 @@ header {
 .menu-item a {
   color: #fff;
   font-size: 22px;
+  text-decoration: none;
 }
 
 .menu-item a:hover {
@@ -75,7 +72,52 @@ h1 {
 .submenu {
   display: none;
 }
+
+.menu-item:hover .submenu {
+  display: block;
+}
+
+.menu-item.sub:hover a {
+  color: #263555;
+}
+
+ul.submenu {
+  top: 30px;
+  left: 10px;
+  padding: 2px 3px;
+  background: #fff;
+  z-index: 10;
+  position: absolute;
+  border-radius: 3px;
+  border: 1px solid #fff;
+}
+
+ul.submenu::before {
+  content: "";
+  top: -5px;
+  left: 23px;
+  position: absolute;
+  border-style: solid;
+  border-width: 0 4px 6px 4px;
+  border-color: transparent transparent #fff transparent;
+}
+
+.sub li.submenu  {
+  padding: 2px;
+  line-height: 16px;
+}
+
+.menu-item.sub li.submenu a {
+  color: #6b7488;
+  font-size: 18px;
+}
+
+.menu-item.sub li.submenu a:hover {
+  color: #263555;
+}
+
 /* MAIN */
-
-
+main {
+  background: #fff;
+}
 /* FOOTER */
