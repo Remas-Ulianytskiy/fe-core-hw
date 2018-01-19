@@ -7,6 +7,7 @@ ul, li {
 body {
   font-family: "Pathway Gothic One", sans-serif;
   background: url("../img/background.jpg") no-repeat;
+  background-size: cover;
 }
 
 .container {
@@ -14,8 +15,6 @@ body {
   min-width: 320px;
   max-width: 1024px;
   box-sizing: border-box;
-  /*  */
-  border: 1px solid blue;
 }
 
 /* HEADER */
@@ -27,17 +26,12 @@ header {
 .menu {
   display: flex;
   flex-wrap: wrap;
-  /*  */
-  /* justify-content: center; */
-  border: 1px solid red;
 }
 
 .menu-item {
   width: 33%;
   text-align: center;
   position: relative;
-  /*  */
-  border: 1px solid red;
 }
 
 .menu-item a {
@@ -118,6 +112,43 @@ ul.submenu::before {
 
 /* MAIN */
 main {
+  padding: 20px 40px;
   background: #fff;
 }
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* .gallery-item {
+  height: auto;
+  margin-bottom: 10px;
+} */
+
+.gallery-item {
+  margin-bottom: 10px;
+}
+
+/* .gallery-item img {
+  height: 100%;
+} */
+
+.gallery-item,
+.gallery-item img {
+  width: 100%;
+  max-width: 460px;
+}
+
+.gallery-item img:hover {
+  cursor: zoom-in;
+}
+
+/* .item:hover::after {
+  content: url("../img/zoom-in.svg");
+  cursor: zoom-in;
+  z-index: 9999999;
+  position: absolute;
+} */
+
 /* FOOTER */
