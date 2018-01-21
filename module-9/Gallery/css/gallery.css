@@ -181,6 +181,7 @@ div.list {
 div.list a {
   color: #fff;
   font-size: 14px;
+  text-decoration: none;
 }
 
 div.nav {
