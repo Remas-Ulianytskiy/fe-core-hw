@@ -10,7 +10,6 @@ body {
 }
 
 .wrapper {
-  min-width: 318px;
   max-width: 1024px;
   box-sizing: border-box;
 }
