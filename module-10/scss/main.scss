@@ -1,0 +1,19 @@
+@import 'reset';
+@import 'varibles';
+@import 'header';
+@import 'main-content';
+@import 'footer';
+
+body {
+  font-family: $standart-font;
+  background: url("../img/background.jpg") no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  padding: 0;
+  min-width: 320px;
+  max-width: 1024px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
