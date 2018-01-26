@@ -14,10 +14,6 @@
     width: 33%;
     text-align: center;
     margin-bottom: 20px;
-
-    .header__submenu-wrapper {
-      position: relative;
-    }
   }
 
   &__nav-menu-link {
@@ -50,7 +46,6 @@
     background: #fff;
     text-transform: uppercase;
     font-family: $heading-font;
-    //
     user-select: none;
 
     &:hover {
@@ -58,47 +53,48 @@
     }
   }
 
-  &__submenu {
-    display: none;
-    top: 25px;
-    left: -1px;
-    padding: 2px 3px;
-    background: #fff;
-    z-index: 10;
-    position: absolute;
-    border-radius: 3px;
-    border: 1px solid #fff;
-
-    &::before {
-      content: "";
-      top: -5px;
-      left: 18px;
-      position: absolute;
-      border-style: solid;
-      border-width: 0 4px 6px 4px;
-      border-color: transparent transparent #fff transparent;
-    }
-  }
-
-  &__submenu-link {
-    color: $color4;
-    user-select: none;
-
-    &:hover {
-      color: $color1;
-    }
-  }
-
-  &__submenu-wrapper {
+  .submenu-wrapper {
+    position: relative;
     display: inline-block;
 
     &:hover {
-      .header__submenu {
+      .submenu {
         display: block;
       }
 
       .header__nav-menu-link {
         color: $color1;
+      }
+    }
+
+    .submenu {
+      display: none;
+      top: 25px;
+      left: -1px;
+      padding: 2px 3px;
+      background: #fff;
+      z-index: 10;
+      position: absolute;
+      border-radius: 3px;
+      border: 1px solid #fff;
+
+      &::before {
+        content: "";
+        top: -5px;
+        left: 18px;
+        position: absolute;
+        border-style: solid;
+        border-width: 0 4px 6px 4px;
+        border-color: transparent transparent #fff transparent;
+      }
+
+      &__nav-link {
+        color: $color4;
+        user-select: none;
+
+        &:hover {
+          color: $color1;
+        }
       }
     }
   }
@@ -123,17 +119,18 @@
       font-size: 60px;
     }
 
-    &__submenu {
-      top: 30px;
-      left: 0px;
+    .submenu-wrapper {
+      .submenu {
+        top: 30px;
 
-      &::before {
-        left: 20px;
+        &::before {
+          left: 20px;
+        }
+
+        &__nav-link {
+          font-size: 18px;
+        }
       }
-    }
-
-    &__submenu-link {
-      font-size: 18px;
     }
   }
 }
@@ -167,17 +164,18 @@
       font-size: 70px;
     }
 
-    &__submenu {
-      top: 32px;
-      left: -1px;
+    .submenu-wrapper {
+      .submenu {
+        top: 32px;
 
-      &::before {
-        left: 22px;
+        &::before {
+          left: 22px;
+        }
+
+        &__nav-link {
+          font-size: 20px;
+        }
       }
-    }
-
-    &__submenu-link {
-      font-size: 20px;
     }
   }
 }
