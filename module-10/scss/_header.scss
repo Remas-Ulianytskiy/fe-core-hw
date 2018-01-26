@@ -50,7 +50,6 @@
     background: #fff;
     text-transform: uppercase;
     font-family: $heading-font;
-    //
     user-select: none;
 
     &:hover {
@@ -58,47 +57,47 @@
     }
   }
 
-  &__submenu {
-    display: none;
-    top: 25px;
-    left: -1px;
-    padding: 2px 3px;
-    background: #fff;
-    z-index: 10;
-    position: absolute;
-    border-radius: 3px;
-    border: 1px solid #fff;
-
-    &::before {
-      content: "";
-      top: -5px;
-      left: 18px;
-      position: absolute;
-      border-style: solid;
-      border-width: 0 4px 6px 4px;
-      border-color: transparent transparent #fff transparent;
-    }
-  }
-
-  &__submenu-link {
-    color: $color4;
-    user-select: none;
-
-    &:hover {
-      color: $color1;
-    }
-  }
-
-  &__submenu-wrapper {
+  .submenu-wrapper {
     display: inline-block;
 
     &:hover {
-      .header__submenu {
+      .submenu {
         display: block;
       }
 
       .header__nav-menu-link {
         color: $color1;
+      }
+    }
+
+    .submenu {
+      display: none;
+      top: 25px;
+      left: -1px;
+      padding: 2px 3px;
+      background: #fff;
+      z-index: 10;
+      position: absolute;
+      border-radius: 3px;
+      border: 1px solid #fff;
+
+      &::before {
+        content: "";
+        top: -5px;
+        left: 18px;
+        position: absolute;
+        border-style: solid;
+        border-width: 0 4px 6px 4px;
+        border-color: transparent transparent #fff transparent;
+      }
+
+      &__link {
+        color: $color4;
+        user-select: none;
+
+        &:hover {
+          color: $color1;
+        }
       }
     }
   }
@@ -122,8 +121,10 @@
       line-height: 130px;
       font-size: 60px;
     }
+  }
 
-    &__submenu {
+  .submenu-wrapper {
+    .submenu {
       top: 30px;
       left: 0px;
 
@@ -132,7 +133,7 @@
       }
     }
 
-    &__submenu-link {
+    &__nav-link {
       font-size: 18px;
     }
   }
@@ -166,18 +167,16 @@
       line-height: 150px;
       font-size: 70px;
     }
+  }
 
-    &__submenu {
+  .submenu-wrapper {
+    .submenu {
       top: 32px;
       left: -1px;
 
       &::before {
         left: 22px;
       }
-    }
-
-    &__submenu-link {
-      font-size: 20px;
     }
   }
 }
